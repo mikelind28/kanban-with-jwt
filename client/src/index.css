@@ -114,6 +114,10 @@ tbody tr:nth-child(odd) {
   list-style: none;
 }
 
+a {
+  color: white;
+}
+
 .nav-link {
   color: #fff;
   text-decoration: none;

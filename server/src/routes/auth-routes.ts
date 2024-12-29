@@ -4,9 +4,9 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
 export const login = async (req: Request, res: Response) => {
-  // TODO: If the user exists and the password is correct, return a JWT token
+  // ✅ TODO: If the user exists and the password is correct, return a JWT token
   // the body of this fetch request will look like { username: '', password: ''}. coming from authAPI.tsx
-  // the code below was taken from Module 14 Activity 25, auth-routes.ts
+  // the code below was taken from Module 14 Activity 25, "auth-routes.ts"
   const { username, password } = req.body;  // Extract username and password from request body
 
   // Find the user in the database by username

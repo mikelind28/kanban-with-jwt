@@ -1,7 +1,7 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
 const login = async (userInfo: UserLogin) => {
-  // TODO: make a POST request to the login route
+  // ✅ TODO: make a POST request to the login route 
   // userInfo should be formatted like { username: '', password: '' } according to Login.tsx line 23 (loginData).
   // the response object (data) should contain a token – going to be used like data.token in Login.tsx, in the Auth.login(data.token) function on line 24.
   // the code below was taken from Module 14 Activity 25, "authAPI.tsx".

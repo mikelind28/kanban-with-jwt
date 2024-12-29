@@ -17,10 +17,14 @@ const CreateTicket = () => {
     }
   );
 
+  // react router docs say don't use useNavigate for user interactions (use for timeouts etc). use "redirect('/')" instead?
+  // https://reactrouter.com/start/framework/navigating#redirect
   const navigate = useNavigate();
 
   const [users, setUsers] = useState<UserData[] | undefined>([]);
 
+  // need to get a list of all users so the ticket can be assigned to one of them.
+  // the users found will be mapped to a select element in the form below.
   const getAllUsers = async () => {
     try {
       const data = await retrieveUsers();
@@ -39,6 +43,8 @@ const CreateTicket = () => {
     if (newTicket){
       const data = await createTicket(newTicket);
       console.log(data);
+      // react router docs say don't use useNavigate for user interactions (use for timeouts etc). use "redirect('/')" instead?
+      // https://reactrouter.com/start/framework/navigating#redirect
       navigate('/');
     }
   }
